@@ -1,0 +1,30 @@
+---
+min_players: 5
+max_players: 16
+spare_enabled: false
+position_count_enabled: false
+is_open_event: false
+manager_report_interval: 24
+manager_report_unit: hours
+notification_interval: 3
+notification_unit: days
+reminder_interval: 12
+reminder_units: hours
+spare_rsvp_interval: 2
+spare_rsvp_unit: days
+event_location:
+  timezone: America/Los_Angeles
+  google_maps_place_id: ChIJPxeo-c5_j4ARhlORPsR_VR0
+  address: 1675 Owens St, San Francisco, CA 94158, USA
+  name: Bakar Fitness & Recreation Center at UCSF Mission Bay
+  lat: 37.7682497
+  lng: -122.39325020000001
+repeat: none
+are_attendance_change_notifications_enabled: true
+start_time: '2018-02-09T02:20:59.913Z'
+end_time: '2018-02-09T03:50:59.913Z'
+title: test
+address: 1675 Owens St, San Francisco, CA 94158, USA
+location: Bakar Fitness & Recreation Center at UCSF Mission Bay
+notifyTeam: true
+
