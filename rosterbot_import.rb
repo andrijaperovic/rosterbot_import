@@ -99,6 +99,10 @@ def getGames(worksheet)
 
       timeWithZone = tz.local_to_utc(Time.parse(Date.parse(date).to_s + ' ' + row[game.first-1].to_s +  ' PST/PDT'))
       startTime = DateTime.parse(timeWithZone.to_s)
+      # Handle end of year edge-case 
+      if (DateTime.now > startTime )
+        startTime += 1.year
+      end  
       endTime = startTime + 1.hour
 
       # Winner column
