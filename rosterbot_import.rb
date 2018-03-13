@@ -41,9 +41,10 @@ def getToken
   driver.find_element(:css, "div.entrance-content > button").click
 
   # Wait for login step to complete
-  wait = Selenium::WebDriver::Wait.new(:timeout => 10)
+  wait = Selenium::WebDriver::Wait.new(:timeout => 60)
   wait.until {
-    driver.find_element(:css, "div.home-header")
+    sleep(2)
+    #driver.find_element(:css, "div.home-header")
   }
 
   # Capture network traffic
