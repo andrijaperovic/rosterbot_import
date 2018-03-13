@@ -94,7 +94,7 @@ def getGames(worksheet)
     begin
       checkDate = Regexp.new('[0-9]{1,2}\/[0-9]{1,2}').match(row[0])
       date = checkDate[0] unless checkDate.nil?
-      game = row.each_index.select{|i| ![row[i]].grep(/#{TEAM_NAME} v\.?/).empty? || ![row[i]].grep(/v\.? #{TEAM_NAME}/).empty? }
+      game = row.each_index.select{|i| ![row[i]].grep(/#{TEAM_NAME}.+v\.?/).empty? || ![row[i]].grep(/v\.? #{TEAM_NAME}/).empty? }
 
       next if game.empty?
       timeWithZone = tz.local_to_utc(Time.parse(Date.parse(date).to_s + ' ' + row[game.first-1].to_s +  ' PST/PDT'))
