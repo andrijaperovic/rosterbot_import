@@ -78,7 +78,7 @@ end
 
 def getEvents(bearer)
   response = RestClient.get EVENT_ENDPOINT, {'Accept': 'application/json', 'Content-Type': 'application/json', 'Authorization': bearer}
-  JSON.parse(response.body)['ok']
+  JSON.parse(response.blank? ? "{}" : response.body).try(:[], 'ok') || []
 end
 
 def createEvent(title, start_time, end_time, payload, bearer)
